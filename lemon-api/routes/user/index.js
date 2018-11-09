@@ -15,6 +15,8 @@ function addUser(req, res, next) {
         return res.json({code:2,msg:"用户名为空"});
     }else if(!uid){
         userIsHas();
+    }else{
+        res.json({code:3,msg:"用户已经存在"});
     }
 
     //检查昵称是否存在
